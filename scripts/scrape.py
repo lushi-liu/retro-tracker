@@ -19,8 +19,8 @@ client = MongoClient(os.getenv('MONGODB_URI'))
 db = client['retro-tracker']
 posts_collection = db['posts']
 
-def scrape_retrogaming():
-    subreddit = reddit.subreddit('retrogaming')
+def scrape_maplestory():
+    subreddit = reddit.subreddit('Maplestory')
     for post in subreddit.hot(limit=10):  # Scrape 10 posts
         posts_collection.insert_one({
             'game': post.title.lower(),  # Simplified game detection
@@ -29,4 +29,4 @@ def scrape_retrogaming():
         })
 
 if __name__ == '__main__':
-    scrape_retrogaming()
+    scrape_maplestory()
