@@ -11,12 +11,12 @@ load_success = load_dotenv(env_path)
 reddit = praw.Reddit(
     client_id=os.getenv('REDDIT_CLIENT_ID'),
     client_secret=os.getenv('REDDIT_CLIENT_SECRET'),
-    user_agent='retro-tracker'
+    user_agent=os.getenv('REDDIT_USER_AGENT')
 )
 
 # MongoDB setup
 client = MongoClient(os.getenv('MONGODB_URI'))
-db = client['retro-sentiment']
+db = client['retro-tracker']
 posts_collection = db['posts']
 
 def scrape_retrogaming():
