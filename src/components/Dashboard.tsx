@@ -33,7 +33,7 @@ const Dashboard = () => {
       {
         label: "Sentiment Score",
         data: posts.map((p) => p.score ?? 0),
-        borderColor: "#8884d8",
+        borderColor: "#2fa2a0ff",
         fill: false,
       },
     ],
@@ -42,7 +42,6 @@ const Dashboard = () => {
   return (
     <div>
       <h2>Game Sentiment Trends</h2>
-      <p>Testing Deployment 2</p>
       {posts.length === 0 ? (
         <p>No posts yet.</p>
       ) : (
