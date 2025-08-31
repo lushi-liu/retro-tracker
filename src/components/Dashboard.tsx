@@ -42,6 +42,7 @@ const Dashboard = () => {
   return (
     <div>
       <h2>Game Sentiment Trends</h2>
+      <p>Deployed!</p>
       {posts.length === 0 ? (
         <p>No posts yet.</p>
       ) : (
