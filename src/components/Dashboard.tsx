@@ -43,7 +43,7 @@ const Dashboard = () => {
     <div>
       <h2>Game Sentiment Trends</h2>
       {posts.length === 0 ? (
-        <p>No posts yet.</p>
+        <p>Loading posts...</p>
       ) : (
         <>
           <Line data={chartData} />
